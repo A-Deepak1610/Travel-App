@@ -1,0 +1,90 @@
+import {StyleSheet } from 'react-native'
+ export const styles = StyleSheet.create({
+    container:{
+        marginTop:20,
+        display:'flex',
+        width:'100%',
+        alignItems:'center',
+    },
+    box:{
+        width: '90%',
+        height:250,
+        backgroundColor:"white",
+        shadowColor:'rgb(0, 0, 0)',
+        shadowOpacity:10,
+        shadowRadius:60,
+        elevation:20,
+        borderRadius:10,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+
+    },
+    text:{
+        color:"black",
+        fontWeight:"bold",
+        fontSize:24,
+    },
+    row1:{
+        flexDirection:"row",
+        top:25,
+    },
+    text1:{
+        color:"black",
+        backgroundColor:"rgba(173, 173, 173, 0.4)",
+        width:150,
+        height:45,
+        textAlign:"center",
+        padding:10,  
+        borderRadius:25,
+        borderRadius:25,
+    },
+    text2:{
+        borderRadius:25,
+        padding:10,  
+        textAlign:"center",
+        color:"black",
+        color:"black",
+        backgroundColor:"rgba(173, 173, 173, 0.4)",
+        width:150,
+        height:45,
+        left:14,
+    },
+    row2:{
+        top:40,
+    },
+    text3:{
+        borderRadius:25,
+        padding:10,  
+        textAlign:"center",
+        color:"black",
+        backgroundColor:"rgba(173, 173, 173, 0.4)",
+        width:210,
+        height:45,
+    },
+    row3:{
+        top:55,
+        flexDirection:"row"
+    },  
+    text4:{
+        color:"black",
+        backgroundColor:"rgba(173, 173, 173, 0.4)",
+        width:150,
+        height:45,
+        textAlign:"center",
+        padding:10,  
+        borderRadius:25,
+        borderRadius:25,
+    },
+    text5:{
+        borderRadius:25,
+        padding:10,  
+        textAlign:"center",
+        color:"black",
+        color:"black",
+        backgroundColor:"rgba(173, 173, 173, 0.4)",
+        width:150,
+        height:45,
+        left:14,
+    },
+
+ })
