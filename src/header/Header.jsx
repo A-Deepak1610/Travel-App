@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {ImageBackground, Text, View, Switch} from 'react-native';
 import {styles} from './Headerstyle';
 import Selected from '../../store/Store';
-export default function Header() {
+export default function Header(){
   const {darkmode, setdarkmode} = Selected();
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => {

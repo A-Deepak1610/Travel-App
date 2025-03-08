@@ -24,9 +24,11 @@ export const styles = StyleSheet.create({
     fontSize: 24,
   },
   box1: {
-    top: 20,
+    display:"flex",
+    flexDirection:"column",
   },
   text1: {
+    marginTop:30,
     color: 'white',
     padding: 10,
     backgroundColor: '#00c2b2',
@@ -39,33 +41,10 @@ export const styles = StyleSheet.create({
   text2: {
     color: 'black',
     fontSize: 20,
-    top: 20,
+    marginTop:13,
     left: 20,
   },
-  text3: {
-    color: 'black',
-    fontSize: 20,
-    top: 30,
-    left: 20,
-  },
-  text4: {
-    color: 'black',
-    fontSize: 20,
-    top: 40,
-    left: 20,
-  },
-  text5: {
-    color: 'black',
-    fontSize: 20,
-    top: 50,
-    left: 20,
-  },
-  box2: {
-    top: 95,
-  },
-  box3: {
-    top: 160,
-  },
+
   plan: {
     width: '100%',
     textAlign: 'center',

@@ -3,15 +3,7 @@ import {styles} from './ExploreTripsstyles';
 import {Text, View,TouchableOpacity,Alert,ActivityIndicator,Modal, Image,SectionList} from 'react-native';
 import Selected from '../../store/Store';
 export default function ExploreTrips() {
-  const {
-    total,
-    settotal,
-    darkmode,
-    date,
-    setdate,
-    destination,
-    setdestination,
-  } = Selected();
+  const {total,settotal,darkmode,date,setdate,destination,setdestination,} = Selected();
   const [loader, setloader] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   function palceOrder() {
@@ -33,20 +25,17 @@ export default function ExploreTrips() {
   }
   const DATA = [
     {
-      title: 'Main dishes',
-      data: ['Pizza', 'Burger', 'Risotto'],
+      title: 'Popural Destinations',
+      data: ['Bali', 'Santorini', 'Maldives','Venice'],
+      text:['text1','text2','text3','text4','text5']
     },
     {
-      title: 'Sides',
-      data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
+      title: 'Adventure Trips',
+      data: ['Hiking in Alps', 'Safari in Kenya', 'Driving in Great Barrier Reef'],
     },
     {
-      title: 'Drinks',
-      data: ['Water', 'Coke', 'Beer'],
-    },
-    {
-      title: 'Desserts',
-      data: ['Cheese Cake', 'Ice Cream'],
+      title: 'Cultural Experiences',
+      data: ['Kyoto Temples', 'Marrakech Media', 'Angor Wat'],
     },
   ];
   return (
@@ -81,63 +70,18 @@ export default function ExploreTrips() {
         <Text style={[styles.text, {color: darkmode ? 'black' : 'white'}]}>
           Expore Trips Types
         </Text>
-        <View style={styles.box1}>
-          <Text
-            style={[
-              styles.text1,
-              {backgroundColor: darkmode ? '#00c2b2' : '#b987fb'},
-            ]}>
-            Popural Destinations
-          </Text>
-          <Text style={[styles.text2, {color: darkmode ? 'black' : 'white'}]}>
-            Bali
-          </Text>
-          <Text style={[styles.text3, {color: darkmode ? 'black' : 'white'}]}>
-            Santorini
-          </Text>
-          <Text style={[styles.text4, {color: darkmode ? 'black' : 'white'}]}>
-            Maldives
-          </Text>
-          <Text style={[styles.text5, {color: darkmode ? 'black' : 'white'}]}>
-            Venice
-          </Text>
-        </View>
-        <View style={styles.box2}>
-          <Text
-            style={[
-              styles.text1,
-              {backgroundColor: darkmode ? '#00c2b2' : '#b987fb'},
-            ]}>
-            Adventure Trips
-          </Text>
-          <Text style={[styles.text2, {color: darkmode ? 'black' : 'white'}]}>
-            Hiking in Alps
-          </Text>
-          <Text style={[styles.text3, {color: darkmode ? 'black' : 'white'}]}>
-            Safari in Kenya
-          </Text>
-          <Text style={[styles.text4, {color: darkmode ? 'black' : 'white'}]}>
-            Driving in Great Barrier Reef
-          </Text>
-        </View>
-        <View style={styles.box3}>
-          <Text
-            style={[
-              styles.text1,
-              {backgroundColor: darkmode ? '#00c2b2' : '#b987fb'},
-            ]}>
-            Cultural Experiences
-          </Text>
-          <Text style={[styles.text2, {color: darkmode ? 'black' : 'white'}]}>
-            Kyoto Temples
-          </Text>
-          <Text style={[styles.text3, {color: darkmode ? 'black' : 'white'}]}>
-            Marrakech Media
-          </Text>
-          <Text style={[styles.text4, {color: darkmode ? 'black' : 'white'}]}>
-            Angkor Wat
-          </Text>
-        </View>
+        <SectionList
+        sections={DATA}
+        keyExtractor={(item, index) => item + index}
+        renderItem={({ item }) => (
+          <View style={styles.box1}> 
+           <TouchableOpacity><Text style={styles.text2}>{item}</Text></TouchableOpacity> 
+          </View>
+        )}
+        renderSectionHeader={({ section: { title } }) => (
+          <Text style={styles.text1}>{title}</Text>
+        )}
+      />
       </View>
       <TouchableOpacity
         style={styles.btn}
