@@ -25,7 +25,7 @@ Ensure you have the following installed:
 ### Steps to Install
 ```sh
 # Clone the repository
-git clone https://github.com/your-username/travel-app.git
+git clone https://github.com/A-Deepak1610/Travel-App.git
 cd travel-app
 
 # Install dependencies
